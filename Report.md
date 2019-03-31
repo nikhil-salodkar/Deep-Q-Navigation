@@ -56,8 +56,22 @@ The important hyperparameter values which we have used are:
   - TAU : 0.001 For soft update of target parameters. Used in place of fixed target technique.
   - LR : 0.0001 Learning rate
   
-### Results
+  
+## Results
 
 The agent was trained first using Deep Q Learning with experienced replay and soft update technique only. Then, adding Double DQN technique to existing techniques. The comparision results of both these approaches can be seen in the below graphs:
-  
-  
+
+![Alt Text](images/simple_dqn.PNG)
+
+![Alt Text](images/double_dqn.PNG)
+
+The Simple DQN shows the result of applying simple Deep Q learning using just experienced replay and fixed target techniques. The Double DQN shows the result after adding double DQN technique.
+
+**Using Simple DQN the agent was able to get 13+ rewards on average in about 380 episodes. Adding Double DQN technique the agent was able to get 13+ average reward in about 340 episodes. Thus, this shows that Double DQN makes the agent train faster. Also, Double DQN is able to achieve higher average reward in 720 episodes compared to simple DQN.**
+
+## Future improvements
+
+There are a lot of experiments which could be conducted to improve the agent's learning performance. The techniques which could be experimented with are:
+  - Prioritized Experience : Instead of just randomly selecting experiences from experience buffer, the agent is able to train faster if the experiences which are more important are chosen more often. This can be achieved by setting priority to experiences based on their TD error. Simple logic is that more the TD error for an experience more that particular experience could contribute to learning.
+  - Dueling DQN : In Dueling DQN, we change the Neural Network architecture in such a way that we seperate the state value to state action value. Sometimes it is possible that some states are good irrespective of any action on those states. So, identifying state values seperately helps in training of agent faster. Basically we sepearte Q(s,a) into A(s,a) + V(s), where A(s,a) is called the advantage of each action a in state s and V(s) corresponds to value of a particular state.
+  - Learning through Pixels : Instead of using this simplified environment where state is composed of only 37 dimensions, more challenging is to learn directly through pixel information.
