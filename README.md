@@ -27,8 +27,28 @@ We will assume the environment solved when the agent is able to achieve more tha
     - Windows (32-bit) : [Click Here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
     - Windows (64-bit) : [Click Here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
     
-    Use the above downloaded environment to run the Jupyter notbook.
+    You can use the above downloaded environment to see view how a trained agent behaves in the given envrionment setup.
 
-2. Since the project is developed using Python and Pytorch some necessary packages need to be installed. Install the necessary libraries and packages mentioned in requirements.txt.
+2. Since the project is developed using Python and Pytorch some necessary packages need to be installed. Install the necessary libraries and packages mentioned in **requirements.txt**. To install the necessary packages either use pip or create a new conda environment and install the minimum required packages as mentioned in the requirements file. To set up a python environment to run code using conda, you may follow the instructions below:
 
-3. Run the cells in Jupyter notebook to train a new agent on this environment. Pretrained agent's weights are also present in weights folder.
+    Create and activate a new environment with Python 3.6 and install dependencies
+    
+    - Linux or Mac:
+      ```
+      conda create --name env-name python=3.6
+      source activate env-name
+      ```
+    
+    - Windows:
+      ```
+      conda create --name env-name python=3.6
+      activate env-name
+      ```
+  
+    - Then install the dependecies using 
+      ```
+      pip install -r requirements.txt
+      ```
+3. To use unity agent Unity environment will have to be installed. Follow the instructions in this [link](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md)
+
+4. Run the cells in Jupyter notebook to train a new agent on this environment. Pretrained agent's weights are also present in weights folder.
